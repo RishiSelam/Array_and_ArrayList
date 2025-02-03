@@ -33,24 +33,28 @@ class ArrayFunctions {
         display(odd);
     }
 
-    // Finds the minimum number in the array
+    // Finds two neighboring numbers with the smallest difference
     void min() {
         UserInput in = new UserInput();
         int[] array = in.arrayInput();
 
-        if (array.length == 0) {
-            System.out.println("Array is empty!");
+        if (array.length < 2) {
+            System.out.println("Not enough numbers to compare!");
             return;
         }
 
-        int minNum = array[0];
+        int minIndex = 0;
+        int minDiff = Math.abs(array[1] - array[0]);
 
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] < minNum) {
-                minNum = array[i];
+        for (int i = 1; i < array.length - 1; i++) {
+            int diff = Math.abs(array[i + 1] - array[i]);
+            if (diff < minDiff) {
+                minDiff = diff;
+                minIndex = i;
             }
         }
 
-        System.out.println("Minimum number in the array: " + minNum);
+        System.out.println("Two closest neighboring numbers: " + array[minIndex] + " & " + array[minIndex + 1]);
+        System.out.println("Index of first number: " + minIndex);
     }
 }
