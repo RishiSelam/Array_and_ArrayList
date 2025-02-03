@@ -1,4 +1,7 @@
 // ArrayFunctions.java
+// Rishi Selam
+// AIML B2
+// 23070126107
 
 import java.util.ArrayList;
 
