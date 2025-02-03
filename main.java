@@ -9,7 +9,7 @@ class Main {
         while (true) {
             System.out.println("\nChoose an option:");
             System.out.println("1. Display Even/Odd Numbers");
-            System.out.println("2. Find Minimum Number");
+            System.out.println("2. Find Minimum Neighboring Numbers");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
 
